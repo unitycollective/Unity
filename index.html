@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            background-image: url('https://cdn.discordapp.com/attachments/1286412159567528067/1288644426712748093/image.png?ex=66f5ef25&is=66f49da5&hm=ba76324760e5525e4b2c8ba7d449bddbf1185c70eb3500e3de252f9bdf71c7a3');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* استخدام عرض 90% للتوافق مع الهواتف */
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        img {
+            display: block;
+            margin: 20px auto 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Query لتحسين العرض على الأجهزة المحمولة */
+        @media (max-width: 600px) {
+            .content {
+                padding: 15px; /* تقليل الحشو على الهواتف */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1>Application Form</h1>
+        <form action="/submit" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" required>
+            <br>
+            <label for="country">Your Country:</label>
+            <input type="text" id="country" name="country" required>
+            <br>
+            <label for="achievements">Your Achievements:</label>
+            <textarea id="achievements" name="achievements" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <img src="https://cdn.discordapp.com/attachments/1265483649252462674/1266914964644429925/featured_image647881f05b418.png?ex=66f55341&is=66f401c1&hm=9ce3d8fb39f005077dec077c9ab41eb250b7ca4ab5e769a287cfe7b40c9a8863" alt="Featured Image">
+    </div>
+</body>
+</html>
